@@ -26,8 +26,8 @@
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "generate": "drizzle-kit generate:sqlite",
-    "push": "drizzle-kit push:sqlite",
+    "generate": "drizzle-kit generate",
+    "push": "drizzle-kit push",
     "studio": "drizzle-kit studio"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "autoprefixer": "^10.4.14",
-    "drizzle-kit": "^0.21.4",
+    "drizzle-kit": "^0.22.0",
     "eslint": "^8.57.0",
     "eslint-plugin-qwik": "^1.5.5",
     "postcss": "^8.4.31",
@@ -53,6 +53,6 @@
   },
   "dependencies": {
     "@libsql/client": "^0.6.1",
-    "drizzle-orm": "^0.30.10"
+    "drizzle-orm": "^0.31.0"
   }
 }
