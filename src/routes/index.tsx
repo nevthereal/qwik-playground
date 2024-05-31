@@ -1,5 +1,11 @@
 import { component$ } from "@builder.io/qwik";
-import { Form, routeAction$, routeLoader$ } from "@builder.io/qwik-city";
+import {
+  Form,
+  routeAction$,
+  routeLoader$,
+  z,
+  zod$,
+} from "@builder.io/qwik-city";
 import { desc } from "drizzle-orm";
 import Todo from "~/components/Todo";
 import { db } from "~/drizzle/db";
@@ -11,11 +17,16 @@ export const useTodos = routeLoader$(async () => {
   return qtodos;
 });
 
-export const useAddTodo = routeAction$(async (data) => {
-  await db.insert(todos).values({
-    content: String(data.todo),
-  });
-});
+export const useAddTodo = routeAction$(
+  async (data) => {
+    await db.insert(todos).values({
+      content: data.todo,
+    });
+  },
+  zod$({
+    todo: z.string(),
+  }),
+);
 
 export default component$(() => {
   const todos = useTodos();
