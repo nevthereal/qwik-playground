@@ -22,7 +22,8 @@ export const useServerTimeLoader = routeLoader$(() => {
 export default component$(() => {
   return (
     <>
-      <main class="p-8">
+      <title>Qwik todo App</title>
+      <main class="p-8 text-center">
         <Slot />
       </main>
     </>
