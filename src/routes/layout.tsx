@@ -22,7 +22,6 @@ export const useServerTimeLoader = routeLoader$(() => {
 export default component$(() => {
   return (
     <>
-      <title>Qwik todo App</title>
       <main class="p-8 text-center">
         <Slot />
       </main>
@@ -31,7 +30,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "qwik todo app",
+  title: "Qwik todo app",
   meta: [
     {
       name: "description",
