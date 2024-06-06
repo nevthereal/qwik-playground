@@ -30,12 +30,12 @@ export const useAddTodo = routeAction$(
 
 export default component$(() => {
   const todos = useTodos();
-  const addUser = useAddTodo();
+  const addTodo = useAddTodo();
 
   return (
     <>
       <h1 class="mb-4 text-3xl font-bold">Todo App</h1>
-      <Form class="my-8 flex justify-center gap-2" action={addUser}>
+      <Form class="my-8 flex justify-center gap-2" action={addTodo}>
         <input
           class="rounded-2xl border border-gray-200 p-2"
           name="todo"
